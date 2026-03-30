@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TapLaunch — NFC Keychains + Simple Sites for Small Businesses</title>
+  <meta name="description" content="TapLaunch creates NFC-embedded keychains and clean, fast websites for small businesses and side hustles. Scan to connect, click to convert." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <img src="./assets/logo.png" alt="TapLaunch" />
+    </div>
+    <nav>
+      <a href="#packages">Packages</a>
+      <a href="#work">Work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1 id="hero_title">Tap to connect. Launch your business.</h1>
+      <p id="hero_sub">NFC keychains and simple, effective websites for small businesses and side hustles. Hand clients a keychain, they tap, you get the lead.</p>
+      <div class="cta-row">
+        <a href="#packages" class="btn btn-primary">See Packages</a>
+        <a href="#contact" class="btn btn-outline">Get a Quote</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img class="hero-logo" src="./assets/logo.png" alt="TapLaunch logo" />
+    </div>
+  </section>
+
+  <section id="packages" class="container section">
+    <h2>Packages</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Starter (Side Hustle)</h3>
+        <p>1‑page website + 10 NFC keychains</p>
+        <ul>
+          <li>Clean 1‑page site (hero, offer, about, contact)</li>
+          <li>10 NFC keychains programmed to your linkhub/site</li>
+          <li>1 round of edits • 7‑day turnaround</li>
+        </ul>
+        <div class="price">$500 CAD</div>
+      </div>
+      <div class="card">
+        <h3>Standard</h3>
+        <p>3‑page website + 25 NFC keychains</p>
+        <ul>
+          <li>Home, Services, Contact</li>
+          <li>25 NFC keychains • basic SEO • 2 rounds of edits</li>
+          <li>10‑day turnaround</li>
+        </ul>
+        <div class="price">$850 CAD</div>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>5‑page website + 50 NFC keychains</p>
+        <ul>
+          <li>Custom sections, gallery, FAQs, policies</li>
+          <li>50 NFC keychains • Google Business copy</li>
+          <li>14‑day turnaround</li>
+        </ul>
+        <div class="price">$1,000 CAD</div>
+      </div>
+    </div>
+    <p class="note">Add‑ons: extra keychains, QR stickers, product photos, custom forms, hosting setup.</p>
+  </section>
+
+  <section id="work" class="container section">
+    <h2>Recent Work</h2>
+    <div class="grid">
+      <div class="tile">Keychain: Black + Sky‑Blue Inlay</div>
+      <div class="tile">Keychain: White + Sky‑Blue</div>
+      <div class="tile">Keychain: Brown + White</div>
+      <div class="tile">Site: 1‑Page Link Hub</div>
+      <div class="tile">Site: 3‑Page Services</div>
+      <div class="tile">Site: 5‑Page Pro</div>
+    </div>
+  </section>
+
+  <section id="faq" class="container section">
+    <h2>FAQ</h2>
+    <details>
+      <summary>How do the NFC keychains work?</summary>
+      <p>Tap with a modern smartphone and it opens your link (website, link‑in‑bio, or social). We program them for you.</p>
+    </details>
+    <details>
+      <summary>Where is the site hosted?</summary>
+      <p>We can use free static hosting (Netlify/GitHub Pages) or your preferred platform. Shopify Buy Buttons can be added later.</p>
+    </details>
+    <details>
+      <summary>What’s the turnaround?</summary>
+      <p>Starter: ~7 days, Standard: ~10 days, Pro: ~14 days after content intake.</p>
+    </details>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2>Get a Quote</h2>
+    <!-- Formspree (GitHub Pages friendly). Replace XXXXXX with your Formspree form ID. -->
+    <form action="https://formspree.io/f/XXXXXX" method="POST">
+      <input type="hidden" name="_subject" value="TapLaunch Quote" />
+      <input type="hidden" name="_redirect" value="./thanks.html" />
+      <div class="row">
+        <input name="name" placeholder="Your name" required />
+        <input name="email" type="email" placeholder="Email" required />
+      </div>
+      <div class="row">
+        <select name="package" required>
+          <option value="Starter">Starter ($500 CAD)</option>
+          <option value="Standard">Standard ($850 CAD)</option>
+          <option value="Pro">Pro ($1,000 CAD)</option>
+          <option value="Custom">Custom</option>
+        </select>
+        <input name="phone" placeholder="Phone (optional)" />
+      </div>
+      <textarea name="details" rows="5" placeholder="Tell us about your business and what you need"></textarea>
+      <!-- simple honeypot -->
+      <div class="hp"><label>Leave this empty<input name="website" /></label></div>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+    <p class="note">Deploying on Netlify instead? You can revert to the built-in Netlify form by removing the action attribute and adding <code>data-netlify="true"</code> + the hidden <code>form-name</code> input.</p>
+  </section>
+
+  <footer class="container footer">
+    <div>© TapLaunch. Made in Cochrane, AB.</div>
+    <div class="muted">
+      <a href="#">Privacy</a> • <a href="#">Terms</a>
+    </div>
+  </footer>
+<script>
+fetch('./content/site.json').then(r=>r.json()).then(data=>{
+  const h=document.getElementById('hero_title'); if(h) h.textContent=data.hero_title||h.textContent;
+  const s=document.getElementById('hero_sub'); if(s) s.textContent=data.hero_sub||s.textContent;
+  const pkg=document.querySelector('#packages + .cards')||document.querySelector('#packages');
+  if(pkg && data.packages){
+    const wrap=document.createElement('div'); wrap.className='cards';
+    data.packages.forEach(p=>{
+      const c=document.createElement('div'); c.className='card';
+      c.innerHTML=`<h3>${p.name}</h3><p>${p.desc}</p>`;
+      const ul=document.createElement('ul'); (p.bullets||[]).forEach(b=>{ const li=document.createElement('li'); li.textContent=b; ul.appendChild(li); });
+      c.appendChild(ul);
+      const price=document.createElement('div'); price.className='price'; price.textContent=p.price; c.appendChild(price);
+      wrap.appendChild(c);
+    });
+    const section=document.querySelector('section#packages');
+    const old=section.querySelector('.cards'); if(old) old.replaceWith(wrap); else section.insertBefore(wrap, section.querySelector('.note'));
+  }
+  const faq=document.querySelector('section#faq');
+  if(faq && data.faq){
+    const details=faq.querySelectorAll('details'); details.forEach(d=>d.remove());
+    data.faq.forEach(item=>{
+      const det=document.createElement('details');
+      const sum=document.createElement('summary'); sum.textContent=item.q; det.appendChild(sum);
+      const p=document.createElement('p'); p.textContent=item.a; det.appendChild(p);
+      faq.appendChild(det);
+    });
+  }
+});
+</script>
+</body>
+</html>
