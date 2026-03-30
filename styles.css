@@ -6,11 +6,15 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetic
 .container{max-width:1080px;margin:0 auto;padding:24px}
 .header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .header img{height:44px}
+/* Make header logo larger on the home page only */
+.home .header img{height:132px}
 nav a{margin:0 10px;color:var(--black);text-decoration:none}
 .btn{display:inline-block;padding:10px 16px;border-radius:8px;border:2px solid var(--black);text-decoration:none;font-weight:600}
 .btn-primary{background:var(--blue);border-color:var(--blue);color:var(--white)}
 .btn-outline{background:transparent;color:var(--black)}
 .hero{display:grid;grid-template-columns:1.2fr 0.8fr;align-items:center;gap:24px;padding-top:12px}
+/* Single-column hero on home after removing right art */
+.home .hero{grid-template-columns:1fr}
 .hero h1{font-size:42px;margin:0 0 12px}
 .hero p{font-size:18px;color:var(--muted)}
 .cta-row{display:flex;gap:12px;margin-top:8px}

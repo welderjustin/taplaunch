@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
+<body class="home">
   <header class="container header">
     <div class="brand">
       <a href="./" aria-label="Go to homepage"><img src="./assets/logo.png" alt="TapLaunch" /></a>
     </div>
     <nav>
-      <a href="#packages">Packages</a>
-      <a href="#work">Work</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      <a href="./packages.html">Packages</a>
+      <a href="./work.html">Work</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./index.html#contact" class="btn btn-primary">Get a Quote</a>
     </nav>
   </header>
 
@@ -30,75 +30,14 @@
         <a href="#contact" class="btn btn-outline">Get a Quote</a>
       </div>
     </div>
-    <div class="hero-art">
-      <a href="./" aria-label="Go to homepage"><img class="hero-logo" src="./assets/logo.png" alt="TapLaunch logo" /></a>
-    </div>
+
   </section>
 
-  <section id="packages" class="container section">
-    <h2>Packages</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Starter (Side Hustle)</h3>
-        <p>1‑page website + 10 NFC keychains</p>
-        <ul>
-          <li>Clean 1‑page site (hero, offer, about, contact)</li>
-          <li>10 NFC keychains programmed to your linkhub/site</li>
-          <li>1 round of edits • 7‑day turnaround</li>
-        </ul>
-        <div class="price">$500 CAD</div>
-      </div>
-      <div class="card">
-        <h3>Standard</h3>
-        <p>3‑page website + 25 NFC keychains</p>
-        <ul>
-          <li>Home, Services, Contact</li>
-          <li>25 NFC keychains • basic SEO • 2 rounds of edits</li>
-          <li>10‑day turnaround</li>
-        </ul>
-        <div class="price">$850 CAD</div>
-      </div>
-      <div class="card">
-        <h3>Pro</h3>
-        <p>5‑page website + 50 NFC keychains</p>
-        <ul>
-          <li>Custom sections, gallery, FAQs, policies</li>
-          <li>50 NFC keychains • Google Business copy</li>
-          <li>14‑day turnaround</li>
-        </ul>
-        <div class="price">$1,000 CAD</div>
-      </div>
-    </div>
-    <p class="note">Add‑ons: extra keychains, QR stickers, product photos, custom forms, hosting setup.</p>
-  </section>
 
-  <section id="work" class="container section">
-    <h2>Recent Work</h2>
-    <div class="grid">
-      <div class="tile">Keychain: Black + Sky‑Blue Inlay</div>
-      <div class="tile">Keychain: White + Sky‑Blue</div>
-      <div class="tile">Keychain: Brown + White</div>
-      <div class="tile">Site: 1‑Page Link Hub</div>
-      <div class="tile">Site: 3‑Page Services</div>
-      <div class="tile">Site: 5‑Page Pro</div>
-    </div>
-  </section>
 
-  <section id="faq" class="container section">
-    <h2>FAQ</h2>
-    <details>
-      <summary>How do the NFC keychains work?</summary>
-      <p>Tap with a modern smartphone and it opens your link (website, link‑in‑bio, or social). We program them for you.</p>
-    </details>
-    <details>
-      <summary>Where is the site hosted?</summary>
-      <p>We can use free static hosting (Netlify/GitHub Pages) or your preferred platform. Shopify Buy Buttons can be added later.</p>
-    </details>
-    <details>
-      <summary>What’s the turnaround?</summary>
-      <p>Starter: ~7 days, Standard: ~10 days, Pro: ~14 days after content intake.</p>
-    </details>
-  </section>
+
+
+
 
   <section id="contact" class="container section">
     <h2>Get a Quote</h2>
@@ -124,7 +63,6 @@
       <div class="hp"><label>Leave this empty<input name="website" /></label></div>
       <button class="btn btn-primary" type="submit">Send</button>
     </form>
-    <p class="note">Deploying on Netlify instead? You can revert to the built-in Netlify form by removing the action attribute and adding <code>data-netlify="true"</code> + the hidden <code>form-name</code> input.</p>
   </section>
 
   <footer class="container footer">
