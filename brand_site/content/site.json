@@ -1,0 +1,16 @@
+{
+  "hero_title": "Tap to connect. Launch your business.",
+  "hero_sub": "NFC keychains and simple, effective websites for small businesses and side hustles. Hand clients a keychain, they tap, you get the lead.",
+  "packages": [
+    {"name": "Starter (Side Hustle)", "desc": "1‑page website + 10 NFC keychains", "bullets": ["Clean 1‑page site (hero, offer, about, contact)", "10 NFC keychains programmed to your link", "1 round of edits • 7‑day turnaround"], "price": "$500 CAD"},
+    {"name": "Standard", "desc": "3‑page website + 25 NFC keychains", "bullets": ["Home, Services, Contact", "25 NFC keychains • basic SEO • 2 rounds of edits", "10‑day turnaround"], "price": "$850 CAD"},
+    {"name": "Pro", "desc": "5‑page website + 50 NFC keychains", "bullets": ["Custom sections, gallery, FAQs, policies", "50 NFC keychains • Google Business copy", "14‑day turnaround"], "price": "$1,000 CAD"}
+  ],
+  "faq": [
+    {"q": "How do the NFC keychains work?", "a": "Tap with a modern smartphone and it opens your link (website, link‑in‑bio, or social). We program them for you."},
+    {"q": "Where is the site hosted?", "a": "We can use free static hosting (Netlify/GitHub Pages) or your preferred platform. Shopify Buy Buttons can be added later."},
+    {"q": "What’s the turnaround?", "a": "Starter: ~7 days, Standard: ~10 days, Pro: ~14 days after content intake."}
+  ],
+  "contact_email": "welderjustin@live.ca",
+  "contact_phone": "403-816-1796"
+}
