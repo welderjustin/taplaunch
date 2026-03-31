@@ -14,12 +14,11 @@
     <div class="brand">
       <a href="./" aria-label="Go to homepage"><img src="./assets/logo.png" alt="TapLaunch" /></a>
     </div>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
     <nav>
-      <a href="./packages.html">Products</a>
-      <a href="./services.html">Services</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./packages.html">Shop Now</a>
+      <a href="./packages.html" class="btn btn-primary">Products</a>
+      <a href="./services.html" class="btn btn-outline">Services</a>
+      <a href="./contact.html" class="btn btn-outline">Contact</a>
+      <a href="./packages.html" class="btn btn-primary">Shop Now</a>
     </nav>
   </header>
 
@@ -28,11 +27,7 @@
       <span class="kicker">NFC keychains + simple sites</span>
       <h1 id="hero_title">Tap to connect. <span class="text-gradient">Launch your business.</span></h1>
       <p id="hero_sub">TapLaunch pairs branded NFC keychains, cards, and stickers with fast, mobile‑first websites. Zero learning curve, no setup headaches — just tap and go.</p>
-      <div class="cta-row">
-        <a href="./packages.html" class="btn btn-primary">Products</a>
-        <a href="./services.html" class="btn btn-outline">Services</a>
-        <a href="./contact.html" class="btn btn-outline">Contact</a>
-      </div>
+
       <div class="hero-badges">
         <span class="badge"><span class="dot"></span> 2–5 day turnaround</span>
         <span class="badge"><span class="dot"></span> Mobile-first, blazing fast</span>
@@ -104,11 +99,7 @@ fetch('./content/site.json').then(r=>r.json()).then(data=>{
     });
   }
 });
-document.getElementById('menuBtn')?.addEventListener('click',()=>{
-  const btn=document.getElementById('menuBtn');
-  const open=document.body.classList.toggle('nav-open');
-  if(btn) btn.setAttribute('aria-expanded', open? 'true':'false');
-});
+
 </script>
 </body>
 </html>

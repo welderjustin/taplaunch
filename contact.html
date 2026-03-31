@@ -13,12 +13,11 @@
     <div class="brand">
       <a href="./" aria-label="Go to homepage"><img src="./assets/logo.png" alt="TapLaunch" /></a>
     </div>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
     <nav>
-      <a href="./packages.html">Products</a>
-      <a href="./services.html">Services</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./packages.html">Shop Now</a>
+      <a href="./packages.html" class="btn btn-primary">Products</a>
+      <a href="./services.html" class="btn btn-outline">Services</a>
+      <a href="./contact.html" class="btn btn-outline">Contact</a>
+      <a href="./packages.html" class="btn btn-primary">Shop Now</a>
     </nav>
   </header>
 
@@ -71,12 +70,6 @@
       <a href="#" aria-label="YouTube" title="YouTube"><svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 7.5a4 4 0 0 0-3-3C18 4 12 4 12 4s-6 0-8 .5a4 4 0 0 0-3 3A41 41 0 0 0 1 12a41 41 0 0 0 0 4.5 4 4 0 0 0 3 3c2 .5 8 .5 8 .5s6 0 8-.5a4 4 0 0 0 3-3A41 41 0 0 0 23 12a41 41 0 0 0 0-4.5ZM10 15V9l6 3-6 3Z" fill="currentColor"/></svg></a>
     </div>
   </footer>
-<script>
-document.getElementById('menuBtn')?.addEventListener('click',()=>{
-  const btn=document.getElementById('menuBtn');
-  const open=document.body.classList.toggle('nav-open');
-  if(btn) btn.setAttribute('aria-expanded', open? 'true':'false');
-});
-</script>
+
 </body>
 </html>
