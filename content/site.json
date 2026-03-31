@@ -1,5 +1,5 @@
 {
-  "hero_title": "Tap to connect. Launch your business.",
+  "hero_title": "Tap to connect. <span class=\"text-gradient\">Launch your business.</span>",
   "hero_sub": "NFC keychains and simple, effective websites for small businesses and side hustles. Hand clients a keychain, they tap, you get the lead.",
   "packages": [
     {"name": "Starter (Side Hustle)", "desc": "1‑page website + 10 NFC keychains", "bullets": ["Clean 1‑page site (hero, offer, about, contact)", "10 NFC keychains programmed to your link", "1 round of edits • 7‑day turnaround"], "price": "$500 CAD"},

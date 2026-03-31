@@ -20,6 +20,13 @@
       <a href="#contact">Contact</a>
       <a href="./packages.html" class="btn btn-primary">Shop Now</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
+    <nav>
+      <a href="./packages.html">Products</a>
+      <a href="./services.html">Services</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+      <a href="./packages.html" class="btn btn-primary">Shop Now</a>
+    </nav>
   </header>
 
   <section class="hero container">
@@ -102,6 +109,11 @@ fetch('./content/site.json').then(r=>r.json()).then(data=>{
       faq.appendChild(det);
     });
   }
+});
+document.getElementById('menuBtn')?.addEventListener('click',()=>{
+  const btn=document.getElementById('menuBtn');
+  const open=document.body.classList.toggle('nav-open');
+  if(btn) btn.setAttribute('aria-expanded', open? 'true':'false');
 });
 </script>
 </body>
