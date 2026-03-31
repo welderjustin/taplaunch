@@ -72,6 +72,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);outline-of
 .social a{color:var(--muted);text-decoration:none}
 .social a:hover{color:var(--text)}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.cards,.grid,.row,.steps,.features{grid-template-columns:1fr}.hero h1{font-size:38px}}
+@media(max-width:900px){
+  .header{flex-wrap:wrap}
+  .header nav{margin-top:8px}
+}
 @media(max-width:600px){
   .container{padding:18px}
   .header{gap:10px}
