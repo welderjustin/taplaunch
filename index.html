@@ -76,7 +76,7 @@
   </footer>
 <script>
 fetch('./content/site.json').then(r=>r.json()).then(data=>{
-  const h=document.getElementById('hero_title'); if(h) h.textContent=data.hero_title||h.textContent;
+  const h=document.getElementById('hero_title'); if(h && data.hero_title){ h.innerHTML = data.hero_title; }
   const s=document.getElementById('hero_sub'); if(s) s.textContent=data.hero_sub||s.textContent;
   const pkg=document.querySelector('#packages + .cards')||document.querySelector('#packages');
   if(pkg && data.packages){
