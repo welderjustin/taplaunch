@@ -28,12 +28,7 @@ body{
 @media(min-width:1200px){.header .brand img{height:132px}}
 nav a{margin:0 12px;color:var(--text);text-decoration:none;opacity:.9}
 nav a:hover{opacity:1}
-.menu-btn{display:none;background:rgba(255,255,255,0.10);color:var(--text);border:1px solid rgba(255,255,255,0.18);padding:10px 12px;border-radius:10px}
-@media(max-width:900px){
-  .menu-btn{display:inline-block}
-  .header nav{display:none}
-  body.nav-open .header nav{display:block;margin-top:8px}
-}
+
 .btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);text-decoration:none;font-weight:650;letter-spacing:.2px;transition:all .18s ease;backdrop-filter:saturate(140%) blur(6px)}
 .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;color:#0b1020;box-shadow:0 8px 24px rgba(34,211,238,0.25), 0 2px 8px rgba(167,139,250,0.2)}
 .btn-primary:hover{transform:translateY(-1px)}
