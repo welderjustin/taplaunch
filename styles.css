@@ -42,6 +42,7 @@ nav a:hover{opacity:1}
 .text-gradient{background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;display:inline-block}
 .hero p{font-size:18px;color:var(--muted);max-width:60ch}
 .cta-row{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.mobile-cta{display:none}
 .hero-badges{display:flex;gap:18px;align-items:center;margin-top:18px;opacity:.9}
 .badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,0.12);color:var(--text);padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.05)}
 .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
@@ -75,6 +76,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);outline-of
 @media(max-width:900px){
   .header{flex-wrap:wrap}
   .header nav{margin-top:8px}
+  .mobile-cta{display:flex}
 }
 @media(max-width:600px){
   .container{padding:18px}
