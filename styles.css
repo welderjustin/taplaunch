@@ -38,6 +38,10 @@ nav a:hover{opacity:1}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:28px;padding-top:8px}
 /* Two-column hero on home when video is present */
 .home .hero{grid-template-columns:1.1fr .9fr}
+@media(max-width:900px){
+  .home .hero{grid-template-columns:1fr}
+  .home .hero .hero-media{order:-1;margin-bottom:12px}
+}
 .hero h1{font-size:clamp(40px,7vw,80px);line-height:1.03;margin:0 0 14px}
 .text-gradient{background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;display:inline-block}
 .hero p{font-size:18px;color:var(--muted);max-width:60ch}
