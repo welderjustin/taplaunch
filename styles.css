@@ -89,13 +89,13 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);outline-of
 
 /* === Added: Subtle glow + product rows === */
 @media (prefers-color-scheme: dark) {
-  :root{ --glow-accent: 167 139 250; --glow-soft: 0.5; }
+  :root{ --glow-accent: 167 139 250; --glow-soft: 0.75; }
   body::before{
     content:"";position:fixed;inset:-10vmax;pointer-events:none;z-index:-1;
     background:
-      radial-gradient(60vmax 60vmax at 20% 10%, rgba(var(--glow-accent)/0.10), transparent 60%),
-      radial-gradient(50vmax 50vmax at 80% 20%, rgba(var(--glow-accent)/0.08), transparent 60%),
-      radial-gradient(70vmax 70vmax at 50% 100%, rgba(var(--glow-accent)/0.06), transparent 60%);
+      radial-gradient(60vmax 60vmax at 20% 10%, rgba(var(--glow-accent)/0.15), transparent 60%),
+      radial-gradient(50vmax 50vmax at 80% 20%, rgba(var(--glow-accent)/0.12), transparent 60%),
+      radial-gradient(70vmax 70vmax at 50% 100%, rgba(var(--glow-accent)/0.09), transparent 60%);
     filter: blur(24px) saturate(110%);
   }
 }
@@ -115,21 +115,19 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);outline-of
 }
 @keyframes glow-drift { 0%{ transform: translate3d(0,0,0) scale(1)} 100%{ transform: translate3d(1.5vmax,-1.2vmax,0) scale(1.03)} }
 @media (prefers-reduced-motion: reduce) { body.home::before { animation: none } }
-
 .glow-card{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset}
 @media (prefers-color-scheme: dark) {
-  .glow-card{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset, 0 0 24px rgba(var(--glow-accent)/calc(var(--glow-soft)*0.7));transition:box-shadow .2s ease,transform .2s ease}
-  .glow-card:hover{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset, 0 0 36px rgba(var(--glow-accent)/calc(var(--glow-soft)*1.1));transform:translateY(-1px)}
+  .glow-card{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset, 0 0 36px rgba(var(--glow-accent)/calc(var(--glow-soft)*0.7));transition:box-shadow .2s ease,transform .2s ease}
+  .glow-card:hover{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset, 0 0 48px rgba(var(--glow-accent)/calc(var(--glow-soft)*1.1));transform:translateY(-1px)}
 }
 
-@media (prefers-color-scheme: dark){.btn-primary:hover{box-shadow:0 8px 24px rgba(34,211,238,0.25),0 2px 8px rgba(167,139,250,0.2),0 0 28px rgba(var(--glow-accent)/0.7)}}
+@media (prefers-color-scheme: dark){.btn-primary:hover{box-shadow:0 8px 24px rgba(34,211,238,0.25),0 2px 8px rgba(167,139,250,0.2),0 0 40px rgba(var(--glow-accent)/0.9)}}
 @media (prefers-reduced-motion: reduce){.glow-card,.btn-primary{transition:none}}
 
 .product-row{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center;margin:18px 0}
 .product-row .media{border-radius:16px;overflow:hidden}
-.product-row .media img{display:block;width:100%;height:auto;object-fit:cover}
-.product-row .media.sm img{width:50%;margin:0 auto}
-@media(max-width:900px){.product-row .media.sm img{width:70%}}
+.product-row .media img{display:block;width:60%;margin:0 auto;height:auto;object-fit:cover;border-radius:16px}
+@media(max-width:900px){.product-row .media img{width:80%}}
 .product-row .copy h3{margin:0 0 6px}
 .product-row .copy p{color:var(--muted)}
 @media(max-width:900px){.product-row{grid-template-columns:1fr}}
