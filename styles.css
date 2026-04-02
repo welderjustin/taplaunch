@@ -100,6 +100,22 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);outline-of
   }
 }
 
+/* Home-only stronger blob glow */
+@media (prefers-color-scheme: dark) {
+  :root{ --glow-a: 123 97 255; --glow-b: 34 211 238; --glow-c: 96 165 250; }
+  body.home::before{
+    background:
+      radial-gradient(40vmax 40vmax at 20% 15%, rgba(var(--glow-a)/0.28), transparent 60%),
+      radial-gradient(38vmax 38vmax at 80% 20%, rgba(var(--glow-b)/0.22), transparent 60%),
+      radial-gradient(60vmax 60vmax at 50% 85%, rgba(var(--glow-c)/0.20), transparent 60%),
+      radial-gradient(24vmax 24vmax at 75% 70%, rgba(var(--glow-a)/0.18), transparent 70%),
+      radial-gradient(22vmax 22vmax at 30% 75%, rgba(var(--glow-b)/0.16), transparent 70%);
+    animation: glow-drift 18s ease-in-out infinite alternate;
+  }
+}
+@keyframes glow-drift { 0%{ transform: translate3d(0,0,0) scale(1)} 100%{ transform: translate3d(1.5vmax,-1.2vmax,0) scale(1.03)} }
+@media (prefers-reduced-motion: reduce) { body.home::before { animation: none } }
+
 .glow-card{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset}
 @media (prefers-color-scheme: dark) {
   .glow-card{box-shadow:0 1px 0 rgba(255,255,255,0.07) inset, 0 0 24px rgba(var(--glow-accent)/calc(var(--glow-soft)*0.7));transition:box-shadow .2s ease,transform .2s ease}
